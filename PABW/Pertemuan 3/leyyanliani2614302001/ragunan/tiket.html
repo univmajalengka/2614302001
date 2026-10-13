@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informasi tiket - Taman Margasatwa Ragunan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="atas"><div class="bungkus atas-isi">
+  <a class="merek" href="index.html"><span class="logo" aria-hidden="true">R</span><span><strong>Ragunan</strong><small>Taman Margasatwa</small></span></a>
+  <nav class="menu" aria-label="Menu utama"><a href="index.html">Beranda</a><a href="paket.html">Paket wisata</a><a href="tiket.html" aria-current="page">Informasi tiket</a><a href="jadwal.html">Jadwal</a><a href="jadwal.html#makan-satwa">Makan satwa</a><a href="petunjuk.html">Petunjuk arah</a><a href="galeri.html">Galeri</a><a href="video.html">Video</a></nav>
+  <a class="tombol kecil" href="https://ragunanzoo.jakarta.go.id" target="_blank" rel="noopener">Beli tiket resmi</a>
+</div></header>
+<section class="judul-halaman"><div class="bungkus"><h1>Informasi tiket</h1><p>Harga tiket masuk, tiket wahana, kalkulator biaya, dan cara membelinya.</p></div></section>
+<main class="bungkus konten">
+<h2 class="judul-bagian" id="tiket">Harga tiket</h2>
+      <div class="geser">
+        <table class="tabel">
+          <thead><tr><th>Jenis tiket</th><th>Harga per orang</th></tr></thead>
+          <tbody>
+            <tr><td>Tiket masuk kawasan - dewasa</td><td>Rp4.000</td></tr>
+            <tr><td>Tiket masuk kawasan - anak-anak</td><td>Rp3.000</td></tr>
+            <tr><td>Pusat Primata Schmutzer - Selasa sampai Jumat</td><td>Rp6.000</td></tr>
+            <tr><td>Pusat Primata Schmutzer - Sabtu, Minggu, hari libur nasional</td><td>Rp7.500</td></tr>
+            <tr><td>Taman Satwa Anak</td><td>Rp2.500</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="catatan">Harga mengacu pada pemberitaan terbaru (September 2026) dan harga paket adalah hitungan dari tarif tersebut dan dapat berubah, karena kenaikan tiket masuk sedang diusulkan. Cek harga resmi di ragunanzoo.jakarta.go.id sebelum berkunjung.</p>
+
+      <h2 class="judul-bagian">Hitung Perkiraan Biaya</h2>
+      <div class="hitung">
+        <label>Jumlah dewasa <input type="number" id="dewasa" min="0" value="2"></label>
+        <label>Jumlah anak <input type="number" id="anak" min="0" value="1"></label>
+        <label>Hari kunjungan <select id="hari"><option value="6000">Selasa - Jumat</option><option value="7500">Sabtu, Minggu, libur nasional</option></select></label>
+        <label class="cek"><input type="checkbox" id="schmutzer"> Pusat Primata Schmutzer</label>
+        <label class="cek"><input type="checkbox" id="satwaanak"> Taman Satwa Anak</label>
+        <p class="total">Perkiraan total: <strong id="total">Rp0</strong></p>
+      </div>
+    
+
+    <script>
+      const ids = ["dewasa", "anak", "hari", "schmutzer", "satwaanak"];
+      function hitung() {
+        const d = Math.max(0, +document.getElementById("dewasa").value || 0);
+        const a = Math.max(0, +document.getElementById("anak").value || 0);
+        let total = d * 4000 + a * 3000;
+        if (document.getElementById("schmutzer").checked) total += (d + a) * +document.getElementById("hari").value;
+        if (document.getElementById("satwaanak").checked) total += (d + a) * 2500;
+        document.getElementById("total").textContent = "Rp" + total.toLocaleString("id-ID");
+      }
+      ids.forEach(i => document.getElementById(i).addEventListener("input", hitung));
+      hitung();
+    </script>
+
+<h2 class="judul-bagian">Cara membeli tiket</h2>
+<div class="papan-3 kotak-4">
+  <div class="kotak"><strong>Online</strong><p>Beli lewat situs resmi ragunanzoo.jakarta.go.id supaya tidak antre panjang, terutama saat libur Lebaran dan akhir tahun.</p><a class="tombol kecil" href="https://ragunanzoo.jakarta.go.id" target="_blank" rel="noopener">Buka situs resmi</a></div>
+  <div class="kotak"><strong>Mesin Razootix</strong><p>Mesin tiket otomatis di setiap pintu masuk dan wahana seperti Pusat Primata Schmutzer dan Taman Satwa Anak. Pilih jumlah tiket masuk dan wahana yang diinginkan.</p></div>
+  <div class="kotak"><strong>Loket</strong><p>Beli langsung di loket dekat pintu masuk kawasan Ragunan.</p></div>
+  <div class="kotak"><strong>Kartu JakCard</strong><p>Kartu JakCard Bank DKI dibeli dan diisi saldo di loket. Satu kartu bisa dipakai lebih dari satu orang.</p></div>
+</div>
+<h2 class="judul-bagian">Yang perlu diketahui</h2>
+<ul class="tips">
+  <li>Tiket Pusat Primata Schmutzer dan Taman Satwa Anak dibeli terpisah dari tiket masuk kawasan.</li>
+  <li>Harga Schmutzer berbeda menurut hari: Selasa sampai Jumat dan akhir pekan atau libur nasional.</li>
+  <li>Rental scooter dan stroller di area utara punya tarif sendiri, lihat halaman <a href="petunjuk.html#sewa">Petunjuk arah</a>.</li>
+  <li>Kenaikan tarif masuk sedang diusulkan, jadi cek harga resmi sebelum berkunjung.</li>
+</ul>
+</main>
+<footer class="kaki"><div class="bungkus kaki-isi">
+  <div><strong>Taman Margasatwa Ragunan</strong><p>Jl. Harsono RM No. 1, Ragunan, Pasar Minggu, Jakarta Selatan</p></div>
+  <div><strong>Menu</strong><p><a href="index.html">Beranda</a> &middot; <a href="paket.html">Paket wisata</a> &middot; <a href="tiket.html">Informasi tiket</a> &middot; <a href="jadwal.html">Jadwal</a> &middot; <a href="jadwal.html#makan-satwa">Makan satwa</a> &middot; <a href="petunjuk.html">Petunjuk arah</a> &middot; <a href="galeri.html">Galeri</a> &middot; <a href="video.html">Video</a></p></div>
+  <div><strong>Jam buka</strong><p>Selasa - Minggu, 07.00 - 16.00 WIB<br>Senin tutup (libur satwa)</p></div>
+</div></footer>
+</body>
+</html>

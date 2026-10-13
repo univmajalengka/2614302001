@@ -1,0 +1,182 @@
+:root{--ink:#13251d;--forest:#1d4d36;--lime:#a6d65a;--gold:#f4a300;--gold-deep:#a86a00;--mist:#eef4ea;--paper:#fbfdf9;--line:#d5e0cf;--muted:#56665d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Figtree","Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;line-height:1.15;font-weight:800}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.bungkus{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.atas{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+.atas-isi{display:flex;align-items:center;gap:20px;padding-top:10px;padding-bottom:10px}
+.merek{display:flex;align-items:center;gap:10px;text-decoration:none}
+.merek strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem;line-height:1}
+.merek small{color:var(--muted);font-size:.75rem}
+.logo{width:40px;height:40px;border-radius:12px;background:var(--gold);color:var(--ink);display:grid;place-items:center;font:800 1.4rem "Bricolage Grotesque",sans-serif}
+.menu{display:flex;gap:4px;margin-left:auto}
+.menu a{text-decoration:none;font-weight:600;font-size:.92rem;padding:8px 12px;border-radius:8px}
+.menu a:hover{background:var(--mist)}
+.menu a[aria-current="page"]{background:var(--forest);color:#fff}
+
+/* Tombol */
+.tombol{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;text-decoration:none;padding:12px 22px;border-radius:12px;border:2px solid var(--gold)}
+.tombol:hover{background:#ffb81f}
+.tombol.garis{background:transparent;border-color:var(--ink)}
+.tombol.garis:hover{background:var(--ink);color:#fff}
+.tombol.garis.terang{border-color:#fff;color:#fff}
+.tombol.garis.terang:hover{background:#fff;color:var(--forest)}
+.tombol.kecil{padding:8px 16px;font-size:.88rem}
+.aksi{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+
+/* Hero */
+.hero{background:var(--mist);overflow:hidden}
+.hero-isi{display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:center;padding-top:48px;padding-bottom:56px}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);letter-spacing:-.02em}
+.lead{font-size:1.1rem;margin-top:16px;max-width:34em;color:#2b3f35}
+.chip{display:inline-block;font-size:.85rem;font-weight:700;padding:6px 14px;border-radius:8px;background:#fff;border:1px solid var(--line);margin-bottom:18px}
+.chip.buka{background:#e1f3cf;border-color:#a6d65a;color:#1f5a14}
+.chip.tutup{background:#fde7e2;border-color:#f0b3a8;color:#8e2a1c}
+.trio{position:relative;height:520px}
+.trio figure{position:absolute;border-radius:18px;overflow:hidden;border:5px solid #fff;box-shadow:0 14px 30px rgba(19,37,29,.2)}
+.trio img{width:100%;height:100%;object-fit:cover}
+.trio figcaption{position:absolute;left:10px;bottom:10px;background:var(--lime);font-weight:700;font-size:.8rem;padding:3px 10px;border-radius:6px}
+.trio .a{width:44%;height:66%;left:0;top:14%;transform:rotate(-3deg)}
+.trio .b{width:46%;height:76%;left:27%;top:0;z-index:2;transform:rotate(2deg)}
+.trio .c{width:42%;height:62%;right:0;bottom:0;z-index:3;transform:rotate(-2deg)}
+
+/* Bagian umum */
+.bagian{padding:56px 0 8px}
+.kepala{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:20px}
+.kepala h2{font-size:1.8rem}
+.kepala a{font-weight:700;color:var(--gold-deep)}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px}
+.strip figure{flex:0 0 220px;scroll-snap-align:start}
+.strip img{width:100%;height:320px;object-fit:cover;border-radius:14px}
+.strip figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+
+/* Paket */
+.paket-baris{display:grid;grid-template-columns:240px 1fr 210px;gap:28px;align-items:center;padding:24px 0;border-top:1px solid var(--line)}
+.paket-baris img{width:100%;height:200px;object-fit:cover;border-radius:14px}
+.paket-baris h3{font-size:1.35rem;margin-bottom:6px}
+.paket-baris p{color:#2b3f35;max-width:36em}
+.termasuk{list-style:none;margin-top:10px;font-size:.9rem}
+.termasuk li::before{content:"\2713";color:#2e8b3a;font-weight:800;margin-right:8px}
+.harga{border-left:4px solid var(--gold);padding-left:18px;display:grid;gap:2px}
+.harga small{color:var(--muted)}
+.harga strong{font:800 1.8rem "Bricolage Grotesque",sans-serif}
+.harga em{font-style:normal;font-size:.78rem;color:var(--muted);margin:4px 0 10px}
+
+/* Video */
+.video-band{background:var(--forest);color:#fff;margin-top:56px;padding:56px 0}
+.video-isi{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.video-band h2{font-size:1.9rem}
+.video-band p{margin-top:12px;color:#d6e6da}
+.cuplikan{position:relative;display:block;border-radius:16px;overflow:hidden;max-height:420px}
+.cuplikan img{width:100%;height:420px;object-fit:cover;opacity:.85}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:54px;background:#e62117;border-radius:14px}
+.play::after{content:"";position:absolute;left:30px;top:14px;border-left:20px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent}
+.cuplikan:hover .play{background:#c4160d}
+
+/* Papan info */
+.papan-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.papan{background:var(--lime);border-radius:16px;padding:20px;text-decoration:none;display:block;border:3px solid var(--forest)}
+.papan strong{font:800 1.25rem "Bricolage Grotesque",sans-serif;display:block;margin-bottom:6px}
+.papan p+p{margin-top:6px;font-size:.9rem}
+.papan em{display:block;margin-top:10px;font-style:normal;font-weight:700;text-decoration:underline}
+
+/* Halaman dalam */
+.judul-halaman{background:var(--mist);padding:40px 0 32px;border-bottom:1px solid var(--line)}
+.judul-halaman h1{font-size:clamp(1.9rem,4vw,2.8rem)}
+.judul-halaman p{margin-top:8px;color:#2b3f35}
+.konten{padding-top:32px;padding-bottom:16px}
+.judul-bagian{font-size:1.6rem;margin:36px 0 12px}
+.sub{font-size:1.1rem;margin:26px 0 8px}
+.catatan{font-size:.82rem;color:var(--muted);margin-top:10px}
+.geser{overflow-x:auto}
+.tabel{width:100%;border-collapse:collapse;background:#fff}
+.tabel th,.tabel td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+.tabel th{background:var(--forest);color:#fff}
+#tiket + .geser .tabel td:last-child{text-align:right;white-space:nowrap}
+.tabel .tutup-teks{color:#a52a1d;font-weight:700}
+.tabel.jadwal tr.hari-ini td{background:#fff1cf;font-weight:700}
+.status{padding:14px 16px;font-weight:700;border-radius:10px;background:#fff;border:1px solid var(--line)}
+.status.buka{background:#e1f3cf;border-color:#a6d65a;color:#1f5a14}
+.status.tutup{background:#fde7e2;border-color:#f0b3a8;color:#8e2a1c}
+.tips{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 34px;font-size:.92rem}
+.tips li+li{margin-top:6px}
+.hitung{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;background:var(--mist);border-radius:16px;padding:20px}
+.hitung input[type=number],.hitung select{padding:7px;margin-left:6px;border:1px solid var(--line);border-radius:8px;font:inherit}
+.hitung input[type=number]{width:70px}
+.cek input{margin-right:6px}
+.total{flex-basis:100%}
+.total strong{font:800 1.6rem "Bricolage Grotesque",sans-serif}
+
+/* Galeri (kolom bertingkat, foto vertikal) */
+.galeri{columns:3;column-gap:16px}
+.galeri figure{break-inside:avoid;margin-bottom:16px}
+.galeri img{width:100%;border-radius:14px}
+.galeri figcaption{font-size:.85rem;color:var(--muted);padding-top:6px}
+.galeri a:hover img{opacity:.88}
+.lightbox{position:fixed;inset:0;z-index:20;background:rgba(10,20,15,.9);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:100%;max-height:80vh;border-radius:10px}
+.lightbox p{color:#fff;margin-top:10px}
+.lightbox .tutup{position:absolute;top:12px;right:18px;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer}
+
+/* Video halaman */
+.video-halaman{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:40px;align-items:start}
+.pemutar{background:#000;border-radius:16px;overflow:hidden}
+.pemutar video{width:100%;max-height:80vh;display:block}
+.video-info h2{font-size:1.8rem;margin-bottom:10px}
+.video-info .tombol{margin-top:18px}
+
+/* Footer */
+.kaki{background:var(--ink);color:#d3e0d7;margin-top:64px;padding:36px 0;font-size:.9rem}
+.kaki-isi{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}
+.kaki strong{color:#fff;display:block;margin-bottom:4px}
+.kaki a{text-decoration:none}
+.kaki a:hover{text-decoration:underline}
+
+@media(max-width:900px){
+  .atas-isi{flex-wrap:wrap}
+  .menu{order:3;width:100%;margin-left:0;overflow-x:auto}
+  .atas-isi>.tombol{margin-left:auto}
+  .hero-isi,.video-isi,.video-halaman{grid-template-columns:1fr}
+  .trio{height:420px}
+  .paket-baris{grid-template-columns:200px 1fr}
+  .harga{grid-column:1/-1}
+  .papan-3,.kaki-isi{grid-template-columns:1fr}
+  .galeri{columns:2}
+}
+@media(max-width:560px){
+  .paket-baris{grid-template-columns:1fr}
+  .paket-baris img{height:220px}
+  .galeri{columns:1}
+  .kepala{flex-direction:column;gap:4px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Tambahan: petunjuk, tiket, makan satwa */
+[id]{scroll-margin-top:90px}
+.menu{flex-wrap:wrap;justify-content:flex-end}
+.menu a{padding:8px 10px;font-size:.88rem}
+.papan-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.kotak-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.kotak{background:#fff;border:1px solid var(--line);border-top:5px solid var(--lime);border-radius:12px;padding:18px}
+.kotak strong{font:800 1.1rem "Bricolage Grotesque",sans-serif;display:block;margin-bottom:6px}
+.kotak p{font-size:.92rem;margin-bottom:12px}
+.ke-tiket{margin-top:32px}
+.alamat{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;background:var(--mist);border-radius:16px;padding:20px}
+.petunjuk-grid{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start}
+.petunjuk-grid img{width:100%;border-radius:14px}
+.petunjuk-grid figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.titik{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:16px}
+.titik h3{font-size:1rem;margin-bottom:6px}
+.titik ul{list-style:none;font-size:.92rem}
+.titik li{padding:4px 0;border-bottom:1px solid var(--line)}
+.tips a{font-weight:700;color:var(--gold-deep)}
+@media(max-width:700px){.petunjuk-grid{grid-template-columns:1fr}.petunjuk-grid img{max-height:420px;object-fit:cover}}
+
+.video-halaman .cuplikan img{height:340px}

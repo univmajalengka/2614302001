@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeri foto - Taman Margasatwa Ragunan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="atas"><div class="bungkus atas-isi">
+  <a class="merek" href="index.html"><span class="logo" aria-hidden="true">R</span><span><strong>Ragunan</strong><small>Taman Margasatwa</small></span></a>
+  <nav class="menu" aria-label="Menu utama"><a href="index.html">Beranda</a><a href="paket.html">Paket wisata</a><a href="tiket.html">Informasi tiket</a><a href="jadwal.html">Jadwal</a><a href="jadwal.html#makan-satwa">Makan satwa</a><a href="petunjuk.html">Petunjuk arah</a><a href="galeri.html" aria-current="page">Galeri</a><a href="video.html">Video</a></nav>
+  <a class="tombol kecil" href="https://ragunanzoo.jakarta.go.id" target="_blank" rel="noopener">Beli tiket resmi</a>
+</div></header>
+<section class="judul-halaman"><div class="bungkus"><h1>Galeri foto</h1><p>Foto-foto kegiatan wisata di Taman Margasatwa Ragunan. Klik foto untuk memperbesar.</p></div></section>
+<main class="bungkus konten">
+<div class="galeri">
+<figure><a href="gambar/gerbang.jpg" data-cap="Pintu masuk Ragunan"><img src="gambar/gerbang.jpg" alt="Pintu masuk Ragunan"></a><figcaption>Pintu masuk Ragunan</figcaption></figure>
+<figure><a href="gambar/aku.jpg" data-cap="Berfoto di depan kandang jerapah"><img src="gambar/aku.jpg" alt="Berfoto di depan kandang jerapah"></a><figcaption>Berfoto di depan kandang jerapah</figcaption></figure>
+<figure><a href="gambar/orangutan.jpg" data-cap="Orangutan bermain di menara"><img src="gambar/orangutan.jpg" alt="Orangutan bermain di menara"></a><figcaption>Orangutan bermain di menara</figcaption></figure>
+<figure><a href="gambar/jerapah.jpg" data-cap="Jerapah di Ragunan"><img src="gambar/jerapah.jpg" alt="Jerapah di Ragunan"></a><figcaption>Jerapah di Ragunan</figcaption></figure>
+<figure><a href="gambar/beruang.jpg" data-cap="Beruang madu"><img src="gambar/beruang.jpg" alt="Beruang madu"></a><figcaption>Beruang madu</figcaption></figure>
+<figure><a href="gambar/primata.jpg" data-cap="Papan Pusat Primata Schmutzer"><img src="gambar/primata.jpg" alt="Papan Pusat Primata Schmutzer"></a><figcaption>Papan Pusat Primata Schmutzer</figcaption></figure>
+<figure><a href="gambar/petunjuk.jpg" data-cap="Papan petunjuk arah di dalam kebun"><img src="gambar/petunjuk.jpg" alt="Papan petunjuk arah di dalam kebun"></a><figcaption>Papan petunjuk arah di dalam kebun</figcaption></figure>
+</div>
+</main>
+<div class="lightbox" id="lightbox" hidden><button type="button" class="tutup" aria-label="Tutup">&times;</button><img src="" alt=""><p></p></div>
+<script>
+  const lb = document.getElementById("lightbox");
+  document.querySelectorAll(".galeri a").forEach(a => a.addEventListener("click", e => {
+    e.preventDefault();
+    lb.querySelector("img").src = a.href;
+    lb.querySelector("img").alt = a.dataset.cap;
+    lb.querySelector("p").textContent = a.dataset.cap;
+    lb.hidden = false;
+  }));
+  lb.addEventListener("click", () => lb.hidden = true);
+  document.addEventListener("keydown", e => { if (e.key === "Escape") lb.hidden = true; });
+</script>
+<footer class="kaki"><div class="bungkus kaki-isi">
+  <div><strong>Taman Margasatwa Ragunan</strong><p>Jl. Harsono RM No. 1, Ragunan, Pasar Minggu, Jakarta Selatan</p></div>
+  <div><strong>Menu</strong><p><a href="index.html">Beranda</a> &middot; <a href="paket.html">Paket wisata</a> &middot; <a href="tiket.html">Informasi tiket</a> &middot; <a href="jadwal.html">Jadwal</a> &middot; <a href="jadwal.html#makan-satwa">Makan satwa</a> &middot; <a href="petunjuk.html">Petunjuk arah</a> &middot; <a href="galeri.html">Galeri</a> &middot; <a href="video.html">Video</a></p></div>
+  <div><strong>Jam buka</strong><p>Selasa - Minggu, 07.00 - 16.00 WIB<br>Senin tutup (libur satwa)</p></div>
+</div></footer>
+</body>
+</html>

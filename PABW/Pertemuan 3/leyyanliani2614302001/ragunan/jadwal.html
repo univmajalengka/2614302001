@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jadwal operasional - Taman Margasatwa Ragunan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="atas"><div class="bungkus atas-isi">
+  <a class="merek" href="index.html"><span class="logo" aria-hidden="true">R</span><span><strong>Ragunan</strong><small>Taman Margasatwa</small></span></a>
+  <nav class="menu" aria-label="Menu utama"><a href="index.html">Beranda</a><a href="paket.html">Paket wisata</a><a href="tiket.html">Informasi tiket</a><a href="jadwal.html" aria-current="page">Jadwal</a><a href="jadwal.html#makan-satwa">Makan satwa</a><a href="petunjuk.html">Petunjuk arah</a><a href="galeri.html">Galeri</a><a href="video.html">Video</a></nav>
+  <a class="tombol kecil" href="https://ragunanzoo.jakarta.go.id" target="_blank" rel="noopener">Beli tiket resmi</a>
+</div></header>
+<section class="judul-halaman"><div class="bungkus"><h1>Jadwal operasional</h1><p>Jam buka, jadwal makan satwa, dan jadwal khusus hari libur.</p></div></section>
+<main class="bungkus konten">
+      
+
+      <div class="status" id="status" aria-live="polite">Memeriksa jadwal hari ini...</div>
+
+      <h3 class="sub">Jam buka reguler</h3>
+      <div class="geser">
+        <table class="tabel jadwal" id="tabel-jadwal">
+          <thead><tr><th>Hari</th><th>Jam buka</th><th>Keterangan</th></tr></thead>
+          <tbody>
+            <tr data-hari="1"><td>Senin</td><td class="tutup-teks">Tutup</td><td>Hari libur satwa</td></tr>
+            <tr data-hari="2"><td>Selasa</td><td>07.00 - 16.00 WIB</td><td>Hari biasa</td></tr>
+            <tr data-hari="3"><td>Rabu</td><td>07.00 - 16.00 WIB</td><td>Hari biasa</td></tr>
+            <tr data-hari="4"><td>Kamis</td><td>07.00 - 16.00 WIB</td><td>Hari biasa</td></tr>
+            <tr data-hari="5"><td>Jumat</td><td>07.00 - 16.00 WIB</td><td>Hari biasa</td></tr>
+            <tr data-hari="6"><td>Sabtu</td><td>07.00 - 16.00 WIB</td><td>Akhir pekan, biasanya lebih ramai</td></tr>
+            <tr data-hari="0"><td>Minggu</td><td>07.00 - 16.00 WIB</td><td>Akhir pekan, biasanya lebih ramai</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub">Jam buka per area</h3>
+      <div class="geser">
+        <table class="tabel">
+          <thead><tr><th>Area</th><th>Jam</th><th>Keterangan</th></tr></thead>
+          <tbody>
+            <tr><td>Kawasan Ragunan</td><td>07.00 - 16.00 WIB</td><td>Selasa sampai Minggu</td></tr>
+            <tr><td>Pusat Primata Schmutzer</td><td>09.00 - 16.00 WIB</td><td>Sesuai papan informasi di lokasi; tiket terpisah</td></tr>
+            <tr><td>Jogging track</td><td>mulai 06.00 WIB</td><td>Untuk olahraga, tanpa tarif tambahan selain tiket masuk</td></tr>
+            <tr><td>Olahraga malam</td><td>17.00 - 22.00 WIB</td><td>Selasa sampai Jumat, hanya untuk lari, jalan santai, dan bersepeda</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub">Jadwal khusus hari libur</h3>
+      <div class="geser">
+        <table class="tabel">
+          <thead><tr><th>Periode</th><th>Jam buka</th><th>Keterangan</th></tr></thead>
+          <tbody>
+            <tr><td>Libur Lebaran 2026 (22-29 Maret)</td><td>06.00 - 16.00 WIB</td><td>Tutup di hari pertama Lebaran (21 Maret); hari Senin tetap buka</td></tr>
+            <tr><td>Libur Idul Adha 2026 (27-28 Mei)</td><td>10.00 - 16.00 WIB</td><td>Tetap buka selama libur</td></tr>
+            <tr><td>Libur Natal dan Tahun Baru (25 Des 2025 - 4 Jan 2026)</td><td>06.00 - 16.30 WIB</td><td>Buka lebih awal dan tutup lebih lambat dari biasanya</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="judul-bagian" id="makan-satwa">Jadwal makan satwa</h2>
+      <p class="status" id="berikut">Memeriksa jadwal makan satwa berikutnya...</p>
+      <div class="geser">
+        <table class="tabel jadwal" id="tabel-makan">
+          <thead><tr><th>Jam (WIB)</th><th>Satwa</th><th>Keterangan</th></tr></thead>
+          <tbody>
+            <tr data-menit="600"><td>10.00</td><td>Orangutan (lokasi tengah)</td><td>Saat libur panjang juga gajah Sumatera dan simpanse</td></tr>
+            <tr data-menit="630"><td>10.30</td><td>Gorila, pelikan, orangutan (lokasi tengah)</td><td>Gorila ada di Pusat Primata Schmutzer</td></tr>
+            <tr data-menit="660"><td>11.00</td><td>Gajah Sumatera, reptil di terarium</td><td>Dilanjutkan keeper talk. Jerapah juga tercatat 11.00 pada jadwal Mei 2026</td></tr>
+            <tr data-menit="690"><td>11.30</td><td>Orangutan (lokasi utara)</td><td>Jadwal papan hari Minggu</td></tr>
+            <tr data-menit="780"><td>13.00</td><td>Jerapah</td><td>Jadwal papan hari Minggu dan libur</td></tr>
+            <tr data-menit="810"><td>13.30</td><td>Burung di aviary dan burung paruh bengkok</td><td></td></tr>
+            <tr data-menit="840"><td>14.00</td><td>Harimau Sumatera, siamang, komodo, buaya</td><td>Komodo kadang diundur 14.30 pada tanggal khusus</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="tips">
+        <li>Jadwal ini mengacu pada papan jadwal hari Minggu dan hari libur serta pengumuman pengelola. Pada hari biasa, jam makan tergantung petugas kandang.</li>
+        <li>Atraksi makan satwa dan foto bersama satwa umumnya digelar pada akhir pekan, hari libur, dan kunjungan malam.</li>
+        <li>Datang 15 menit sebelum jam makan supaya dapat tempat yang enak untuk melihat.</li>
+      </ul>
+      <p class="catatan">Jam bisa berubah sewaktu-waktu. Cek akun Instagram @ragunanzoo atau papan di Pusat Informasi pada hari kunjungan.</p>
+      <script>
+        (function () {
+          var t = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" }));
+          var now = t.getHours() * 60 + t.getMinutes();
+          var rows = document.querySelectorAll("#tabel-makan tbody tr"), next = null;
+          rows.forEach(function (r) { if (!next && +r.dataset.menit >= now) next = r; });
+          var box = document.getElementById("berikut");
+          if (next) { next.classList.add("hari-ini"); box.textContent = "Berikutnya: " + next.cells[0].textContent + " WIB, " + next.cells[1].textContent + "."; }
+          else { box.textContent = "Atraksi makan satwa hari ini sudah selesai. Coba lagi besok pagi."; }
+        })();
+      </script>
+
+      <h3 class="sub">Tips mengatur waktu kunjungan</h3>
+      <ul class="tips">
+        <li>Datang pagi hari supaya satwa masih aktif dan udara belum terlalu panas.</li>
+        <li>Hindari hari Senin, kecuali ada pengumuman buka khusus saat libur panjang.</li>
+        <li>Pusat Primata Schmutzer baru buka pukul 09.00, jadi mulai dari area lain dulu.</li>
+        <li>Saat libur panjang pengunjung bisa sangat banyak, jadi beli tiket lewat situs resmi atau mesin Razootix supaya tidak antre lama.</li>
+      </ul>
+
+      <p class="catatan">Jadwal dikumpulkan dari pemberitaan dan pengumuman @ragunanzoo sampai Oktober 2026. Jadwal libur bisa berubah, jadi cek ragunanzoo.jakarta.go.id sebelum berkunjung.</p>
+    </main>
+
+    <script>
+      const hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+      const sekarang = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" }));
+      const h = sekarang.getDay();
+      const menit = sekarang.getHours() * 60 + sekarang.getMinutes();
+      const buka = 7 * 60, tutup = 16 * 60;
+      document.querySelector('#tabel-jadwal tr[data-hari="' + h + '"]').classList.add("hari-ini");
+
+      let pesan, kelas;
+      if (h === 1) { pesan = "Hari ini " + hari[h] + ": Ragunan tutup (libur satwa)."; kelas = "tutup"; }
+      else if (menit < buka) { pesan = "Hari ini " + hari[h] + ": belum buka. Buka pukul 07.00 WIB."; kelas = "tutup"; }
+      else if (menit >= tutup) { pesan = "Hari ini " + hari[h] + ": sudah tutup. Buka lagi besok pukul 07.00 WIB (kecuali Senin)."; kelas = "tutup"; }
+      else { pesan = "Hari ini " + hari[h] + ": Ragunan sedang buka sampai pukul 16.00 WIB."; kelas = "buka"; }
+      const el = document.getElementById("status");
+      el.textContent = pesan + " (jadwal reguler, waktu Jakarta)";
+      el.classList.add(kelas);
+    </script>
+
+
+<footer class="kaki"><div class="bungkus kaki-isi">
+  <div><strong>Taman Margasatwa Ragunan</strong><p>Jl. Harsono RM No. 1, Ragunan, Pasar Minggu, Jakarta Selatan</p></div>
+  <div><strong>Menu</strong><p><a href="index.html">Beranda</a> &middot; <a href="paket.html">Paket wisata</a> &middot; <a href="tiket.html">Informasi tiket</a> &middot; <a href="jadwal.html">Jadwal</a> &middot; <a href="jadwal.html#makan-satwa">Makan satwa</a> &middot; <a href="petunjuk.html">Petunjuk arah</a> &middot; <a href="galeri.html">Galeri</a> &middot; <a href="video.html">Video</a></p></div>
+  <div><strong>Jam buka</strong><p>Selasa - Minggu, 07.00 - 16.00 WIB<br>Senin tutup (libur satwa)</p></div>
+</div></footer>
+</body>
+</html>
